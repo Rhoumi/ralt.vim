@@ -63,9 +63,9 @@ hi Pmenu guifg=#ffffff guibg=#454545
 hi SignColumn guibg=#000000
 hi Title guifg=#ffffff
 hi LineNr guifg=#999999 guibg=#000000
-hi NonText guifg=#9a2bf6 guibg=#000000
-hi Comment guifg=#9a2bf6 gui=italic
-hi SpecialComment guifg=#9a2bf6 gui=italic guibg=NONE
+hi NonText guifg=#feffee guibg=#000000
+hi Comment guifg=#feffee gui=italic
+hi SpecialComment guifg=#feffee gui=italic guibg=NONE
 hi CursorLine guibg=#454545
 hi TabLineFill gui=NONE guibg=#454545
 hi TabLine guifg=#999999 guibg=#454545 gui=NONE
