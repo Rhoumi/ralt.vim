@@ -24,7 +24,7 @@ hi Search guibg=#9a2bf6 guifg=#ffffff
 hi ColorColumn guibg=#111111
 
 " ================= ASCII / FOLDS SAFE =================
-" Chaque champ doit avoir un caractère
+" Chaque champ doit avoir exactement un caractère
 set fillchars=vert:|,fold:.,horiz:-,horizup:+,horizdown:+,vertleft:+,vertright:+,foldopen:[,foldclose:],foldsep:|
 set listchars=tab:»·,trail:·,extends:>,precedes:<
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20
@@ -41,7 +41,7 @@ function! s:python_colors() abort
   hi pythonDecorator        guifg=#33bbff gui=bold
   hi pythonDecoratorName    guifg=#0088ff gui=bold
 
-  " Strings = VERTS
+  " Strings = verts
   hi pythonString           guifg=#00ffb6
   hi pythonRawString        guifg=#33dda0
   hi pythonTripleString     guifg=#22bb88
