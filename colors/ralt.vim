@@ -1,6 +1,6 @@
 hi clear
 syntax reset
-let g:colors_name = "ralt_garden_pal_violet_yellow_green"
+let g:colors_name = "ralt_garden_pal_violet_yellow_green2"
 set background=dark
 set t_Co=256
 
@@ -31,7 +31,7 @@ hi pythonTripleString guifg=#aacb7a guibg=NONE
 hi pythonEscape guifg=#ff77cc
 
 hi IncSearch guifg=#d8ff7a guibg=NONE
-hi Define guifg=#d8ff7a
+hi Define guifg=#aaff77
 hi Debug guifg=#d8ff7a
 hi Number guifg=#d8ff7a
 hi Todo guifg=#d8ff7a
