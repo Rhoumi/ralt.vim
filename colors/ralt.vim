@@ -1,6 +1,6 @@
 hi clear
 syntax reset
-let g:colors_name = "ralt_garden_pal_violet_yellow"
+let g:colors_name = "ralt_garden_pal_violet_yellow_green"
 set background=dark
 set t_Co=256
 
@@ -23,12 +23,12 @@ hi GitGutterDelete guifg=#ff6666
 
 hi Constant guifg=#ffffaa
 hi Title guifg=#ffffaa
-hi String guifg=#d4d080
+hi String guifg=#aacb7a
 hi MatchParen guifg=#ffffaa
-hi pythonString guifg=#d4d080 guibg=NONE
-hi pythonRawString guifg=#d4d080 guibg=NONE
-hi pythonTripleString guifg=#d4d080 guibg=NONE
-hi pythonEscape guifg=#ff6666
+hi pythonString guifg=#aacb7a guibg=NONE
+hi pythonRawString guifg=#aacb7a guibg=NONE
+hi pythonTripleString guifg=#aacb7a guibg=NONE
+hi pythonEscape guifg=#ff77cc
 
 hi IncSearch guifg=#d8ff7a guibg=NONE
 hi Define guifg=#d8ff7a
@@ -36,7 +36,7 @@ hi Debug guifg=#d8ff7a
 hi Number guifg=#d8ff7a
 hi Todo guifg=#d8ff7a
 
-hi Function guifg=#ff99aa
+hi Function guifg=#ff77cc
 
 hi StatusLine guibg=#1a221f guifg=#00ff55 gui=bold
 hi StatusLineNC guibg=#0c1210 guifg=#777777
