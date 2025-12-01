@@ -1,7 +1,7 @@
 hi clear
 syntax on
 syntax reset
-let g:colors_name = "ralt_rainbow_black_safe"
+let g:colors_name = "ralt_rainbow_black_custom"
 set background=dark
 set t_Co=256
 
@@ -24,21 +24,20 @@ hi Search guibg=#9a2bf6 guifg=#ffffff
 hi ColorColumn guibg=#111111
 
 " ================= ASCII / FOLDS SAFE =================
-" Seuls les champs valides, plus de vert: ni foldsep:
 set fillchars=fold:.,horiz:-,horizup:+,horizdown:+,vertleft:+,vertright:+,foldopen:[,foldclose:]
 set listchars=tab:»·,trail:·,extends:>,precedes:<
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20
 
-" ================= PYTHON RAINBOW =================
+" ================= PYTHON RAINBOW CUSTOM =================
 augroup python_colors
   autocmd!
   autocmd FileType python call s:python_colors()
 augroup END
 
 function! s:python_colors() abort
-  " Décorateurs
-  hi pythonDecorator        guifg=#33bbff gui=bold
-  hi pythonDecoratorName    guifg=#0088ff gui=bold
+  " Décorateurs en bleu foncé
+  hi pythonDecorator        guifg=#0055aa gui=bold
+  hi pythonDecoratorName    guifg=#003377 gui=bold
 
   " Strings = verts
   hi pythonString           guifg=#00ffb6
@@ -54,9 +53,9 @@ function! s:python_colors() abort
   hi pythonNone             guifg=#ff4444 gui=bold
 
   " FONCTIONS / CLASSES
-  hi pythonFunction         guifg=#fc7575 gui=bold
+  hi pythonFunction         guifg=#fc0000 gui=bold   " def des fonctions en rouge
   hi pythonClass            guifg=#ff8888 gui=bold
-  hi pythonSuperclass       guifg=#dd55dd gui=bold  " violet marqué
+  hi pythonSuperclass       guifg=#dd55dd gui=bold   " violet marqué
 
   " BUILTINS / FLOW / IMPORT
   hi pythonBuiltin          guifg=#00aaff
@@ -65,7 +64,7 @@ function! s:python_colors() abort
   hi pythonImport           guifg=#33ffaa gui=bold
 
   " OPERATORS
-  hi pythonOperator         guifg=#dd8855
+  hi pythonOperator         guifg=#dd55ff   " = en violet
 
   " EXCEPTIONS / RAISE
   hi pythonException        guifg=#ff3333 gui=bold
