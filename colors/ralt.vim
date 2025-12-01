@@ -1,100 +1,95 @@
 hi clear
 syntax reset
-let g:colors_name = "py_unique_shades"
+let g:colors_name = "ralt_garden_pal_c64_python_rainbow"
 set background=dark
 set t_Co=256
 
 " ================= BASE =================
-hi Normal         guifg=#c8c8c8 guibg=#000000
-hi LineNr         guifg=#555555 guibg=#000000
-hi CursorLine     guibg=#101010
-hi CursorLineNr   guifg=#dede6a gui=bold
-hi NonText        guifg=#5f5fd7 guibg=#000000
+hi Normal         guifg=#c0c0c0 guibg=#000000
+hi LineNr         guifg=#404040 guibg=#000000
+hi CursorLine     guibg=#0f0f0f
+hi CursorLineNr   guifg=#fff060 gui=bold
+hi NonText        guifg=#6a5cff guibg=#000000
 
 " ================= UI =================
-hi StatusLine     guibg=#4cff4c guifg=#000000 gui=bold
-hi StatusLineNC   guibg=#143314 guifg=#8a8a8a
-hi VertSplit      guifg=#5f5fd7 guibg=#000000
-hi Visual         guibg=#1a1a1a
+hi StatusLine     guibg=#55ff77 guifg=#000000 gui=bold
+hi StatusLineNC   guibg=#183318 guifg=#9f9f9f
+hi VertSplit      guifg=#6a5cff guibg=#000000
+hi Visual         guibg=#202020
 hi SignColumn     guibg=#000000
-hi Pmenu          guibg=#0f0f0f guifg=#c8c8c8
-hi PmenuSel       guibg=#dede6a guifg=#000000 gui=bold
+hi Pmenu          guibg=#101010 guifg=#c0c0c0
+hi PmenuSel       guibg=#fff060 guifg=#000000 gui=bold
 
-" =============== GENERAL SYNTAX ===============
-hi Type           guifg=#00d766
-hi Keyword        guifg=#bd72ff gui=bold
-hi Statement      guifg=#5fa7ff
-hi Define         guifg=#00d4ff
-hi Function       guifg=#ff9c33 gui=bold
-
-hi Constant       guifg=#d4d45c
-hi Number         guifg=#e6bc3a
-hi String         guifg=#6aff6a
-hi Character      guifg=#3fff3d
+" =============== GENERAL =================
+hi Type           guifg=#00ff99
+hi Keyword        guifg=#b266ff gui=bold
+hi Statement      guifg=#4ca6ff
+hi Define         guifg=#00e5ff
+hi Function       guifg=#ff9f00 gui=bold
+hi Constant       guifg=#ffff44
+hi Number         guifg=#ffd133 gui=bold
+hi String         guifg=#44ff88
+hi Character      guifg=#2bff6a
 hi Title          guifg=#ffffff
 hi MatchParen     guifg=#000000 guibg=#00ffff gui=bold
 
-" ==================================================
-"      PYTHON — ZERO COLOR REPETITION MODE 😈🧪
-" ==================================================
+" =============== PYTHON GROUPS : ZÉRO COULEUR IDENTIQUE =================
 
-" -------- DECORATORS (teinte cyan déclinée) --------
+" ---- Décorateurs (famille CYAN) ----
 hi pythonDecorator        guifg=#00eaff gui=bold
-hi pythonDecoratorName    guifg=#6fdcff gui=bold
+hi pythonDecoratorName    guifg=#30d6ff gui=bold
 
-" -------- STRINGS (teinte verte déclinée) --------
-hi pythonString           guifg=#6aff6a
-hi pythonRawString        guifg=#5cff9c
-hi pythonTripleString     guifg=#4cffcc
-hi pythonEscape           guifg=#ff4c7f
+" ---- Strings (famille VERT) ----
+hi pythonString           guifg=#3cff6f
+hi pythonRawString        guifg=#00ff8a
+hi pythonTripleString     guifg=#1fe6a1
+hi pythonEscape           guifg=#ff2c6d   " rupture rouge/rose
 
-" -------- BOOLEANS / NONE (jaune/orange déclinés) --------
-hi pythonBoolean          guifg=#e6e66a gui=bold
-hi pythonNone             guifg=#ff7878 gui=bold
+" ---- Bool / None (famille JAUNE / ROUGE) ----
+hi pythonBoolean          guifg=#fff000 gui=bold
+hi pythonNone             guifg=#ff5a5a gui=bold
 
-" -------- FUNCTIONS (orange dégradé) --------
-hi pythonFunction         guifg=#ff9c33 gui=bold
-hi pythonBuiltin         guifg=#ffb066
+" ---- Fonctions / classes (famille ORANGE) ----
+hi pythonFunction         guifg=#ff9c1a gui=bold
+hi pythonClass            guifg=#ffb347 gui=bold
+hi pythonSuperclass       guifg=#ff7a18 gui=bold
 
-" -------- OPERATORS / KEYWORDS PY (violet dégradé) --------
-hi pythonOperator         guifg=#d27aff gui=bold
-hi pythonConditional      guifg=#b78cff gui=bold
-hi pythonRepeat           guifg=#a782ff gui=bold
+" ---- Builtins / flow control (famille BLEU) ----
+hi pythonBuiltin          guifg=#5c9cff
+hi pythonConditional      guifg=#3f7cff gui=bold
+hi pythonRepeat           guifg=#6aa8ff gui=bold
+hi pythonImport           guifg=#00b7ff gui=bold
 
-" -------- IMPORTS (cyan profond) --------
-hi pythonImport           guifg=#00b5d1 gui=bold
+" ---- Opérateurs / mots clés (famille VIOLET) ----
+hi pythonOperator         guifg=#b56bff
+hi pythonException        guifg=#ff3030 gui=bold " exception reste rouge volontaire
 
-" -------- EXCEPTIONS (rouge dégradé) --------
-hi pythonException        guifg=#ff4c4c gui=bold
-hi pythonRaiseFrom        guifg=#ff6633 gui=bold
-hi pythonExClass          guifg=#ff8833 gui=bold
+" ---- Erreurs syntaxiques / raise (famille ROUGE ORANGE) ----
+hi pythonRaiseFrom        guifg=#ff6600 gui=bold
+hi pythonExClass          guifg=#ff2200 gui=bold
 
-" -------- CLASSES (orange brun rétro MS-DOS) --------
-hi pythonClass            guifg=#ffaa33 gui=bold
-hi pythonSuperclass       guifg=#dd7a22 gui=bold
+" =============== FEEDBACK =================
+hi IncSearch      guibg=#fff060 guifg=#000000 gui=bold
+hi Search         guibg=#ff9900 guifg=#000000
+hi Todo           guibg=#cc00ff guifg=#ffffff gui=bold
 
-" ---------------- FEEDBACK -----------------
-hi IncSearch      guibg=#dede6a guifg=#000000 gui=bold
-hi Search         guibg=#cc7a22 guifg=#000000
-hi Todo           guibg=#b233d4 guifg=#ffffff gui=bold
-
-" ---------------- ERRORS -------------------
+" =============== ERREURS =================
 hi Error          guifg=#ffffff guibg=#ff0000 gui=bold
-hi ErrorMsg       guifg=#ff3c3c
+hi ErrorMsg       guifg=#ff2a2a
 
-" ---------------- DIFF / GIT ----------------
-hi DiffAdd        guifg=#00dd66
-hi DiffDelete     guifg=#ff3c3c
-hi DiffChange     guifg=#33d7ff
+" =============== DIFF / GIT =================
+hi DiffAdd         guifg=#00ff66
+hi DiffDelete      guifg=#ff2e2e
+hi DiffChange      guifg=#00c8ff
 
-hi GitGutterAdd    guifg=#00dd66
-hi GitGutterDelete guifg=#ff3c3c
-hi GitGutterChange guifg=#33d7ff
+hi GitGutterAdd    guifg=#00ff66
+hi GitGutterDelete guifg=#ff2e2e
+hi GitGutterChange guifg=#00c8ff
 
-" ---------------- COMMENTS -------------------
-hi Comment        guifg=#626262 gui=italic
+" =============== COMMENTAIRES =================
+hi Comment        guifg=#5a5a5a gui=italic
 
-" ---------------- CURSOR ----------------------
+" =============== CURSORS =================
 set guicursor=n-v-c:block-Cursor/lCursor,i-ci:ver25-Cursor2
-hi Cursor   guifg=#000000 guibg=#dede6a
-hi Cursor2  guifg=#000000 guibg=#00d4ff
+hi Cursor   guifg=#000000 guibg=#fff060
+hi Cursor2  guifg=#000000 guibg=#00e5ff
