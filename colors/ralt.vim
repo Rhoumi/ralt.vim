@@ -24,12 +24,10 @@ hi Search guibg=#9a2bf6 guifg=#ffffff
 hi ColorColumn guibg=#111111
 
 " ================= ASCII / FOLDS SAFE =================
-" ONLY folds and basic fillchars, no vert: or foldsep:
+" Seuls les champs valides, plus de vert: ni foldsep:
 set fillchars=fold:.,horiz:-,horizup:+,horizdown:+,vertleft:+,vertright:+,foldopen:[,foldclose:]
-
 set listchars=tab:»·,trail:·,extends:>,precedes:<
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20
-set noligatures
 
 " ================= PYTHON RAINBOW =================
 augroup python_colors
