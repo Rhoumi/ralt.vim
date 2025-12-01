@@ -1,65 +1,64 @@
 hi clear
 syntax reset
-let g:colors_name = "ralt_garden_pal_c64"
+let g:colors_name = "ralt_garden_pal_c64_fluo"
 set background=dark
 set t_Co=256
 
-" ===== BASE =====
-hi Normal       guifg=#9f9f9f guibg=#000000
-hi LineNr       guifg=#505050 guibg=#000000
-hi CursorLine   guibg=#1a1a1a
-hi CursorLineNr guifg=#bfce72
-hi NonText      guifg=#40318d guibg=#000000
+" ========== BASE ==========
+hi Normal         guifg=#d0ffd0 guibg=#000000
+hi LineNr         guifg=#00aa55 guibg=#000000
+hi CursorLine     guibg=#001a0d
+hi CursorLineNr   guifg=#ffff00 gui=bold
+hi NonText        guifg=#00ffcc guibg=#000000
 
-" ===== CODE =====
-hi Type         guifg=#55a049
-hi Keyword      guifg=#8b3f96
-hi Statement    guifg=#7869c4
-hi Define       guifg=#67b6bd
-hi Function     guifg=#8b5427
-
-hi Constant     guifg=#bfce72
-hi Number       guifg=#bfce72
-hi String       guifg=#94e089
-hi Character    guifg=#94e089
-
-hi Title        guifg=#ffffff
-hi MatchParen   guifg=#000000 guibg=#bfce72 gui=bold
-
-" ===== PYTHON =====
-hi pythonString        guifg=#94e089
-hi pythonRawString     guifg=#94e089
-hi pythonTripleString  guifg=#67b6bd
-hi pythonEscape       guifg=#b86962
-hi pythonFunction     guifg=#8b5427
-hi pythonBuiltin      guifg=#7869c4
-hi pythonBoolean      guifg=#bfce72
-hi pythonOperator     guifg=#8b3f96
-hi pythonConditional  guifg=#7869c4 gui=bold
-hi pythonRepeat       guifg=#7869c4 gui=bold
-
-" ===== ERREURS / DIFF =====
-hi Error         guifg=#ffffff guibg=#883932
-hi ErrorMsg      guifg=#883932
-hi DiffAdd       guifg=#94e089
-hi DiffDelete    guifg=#b86962
-hi DiffChange    guifg=#67b6bd
-
-" ===== GIT =====
-hi GitGutterAdd    guifg=#55a049
-hi GitGutterDelete guifg=#883932
-hi GitGutterChange guifg=#67b6bd
-
-" ===== UI =====
-hi StatusLine     guibg=#40318d guifg=#ffffff gui=bold
-hi StatusLineNC   guibg=#000000 guifg=#505050
-hi VertSplit      guifg=#40318d guibg=#000000
-hi Visual         guibg=#40318d
-
+" ========== UI ==========
+hi StatusLine     guibg=#00ff66 guifg=#000000 gui=bold
+hi StatusLineNC   guibg=#003322 guifg=#66ffaa
+hi VertSplit      guifg=#00ff99 guibg=#000000
+hi Visual         guibg=#003322
 hi SignColumn     guibg=#000000
-hi Pmenu          guibg=#1a1a1a guifg=#9f9f9f
-hi PmenuSel       guibg=#bfce72 guifg=#000000
+hi Pmenu          guibg=#001f14 guifg=#aaffcc
+hi PmenuSel       guibg=#00ff99 guifg=#000000 gui=bold
 
-hi IncSearch      guibg=#bfce72 guifg=#000000 gui=bold
-hi Search         guibg=#574200 guifg=#ffffff
-hi Todo           guibg=#8b3f96 guifg=#ffffff gui=bold
+" ========== GENERAL SYNTAX ==========
+hi Type           guifg=#00ffaa gui=bold
+hi Keyword        guifg=#cc66ff gui=bold
+hi Statement      guifg=#00b0ff gui=bold
+hi Define         guifg=#00ffff
+hi Function       guifg=#ff9933 gui=bold
+
+hi Constant       guifg=#ffff00 gui=bold
+hi Number         guifg=#ffd700 gui=bold
+hi String         guifg=#00ff66
+hi Character      guifg=#00ff66
+hi Title          guifg=#ffffff
+hi MatchParen     guifg=#000000 guibg=#00ffff gui=bold
+
+" ========== PYTHON ==========
+hi pythonString        guifg=#00ff66
+hi pythonRawString     guifg=#00ff66
+hi pythonTripleString  guifg=#00e5ff
+hi pythonEscape        guifg=#ff3366
+
+hi pythonBoolean       guifg=#ffff00 gui=bold
+hi pythonFunction      guifg=#ff9933 gui=bold
+hi pythonBuiltin       guifg=#00b0ff gui=bold
+hi pythonOperator      guifg=#cc66ff gui=bold
+hi pythonConditional   guifg=#00b0ff gui=bold
+hi pythonRepeat        guifg=#00b0ff gui=bold
+
+" ========== SEARCH / FEEDBACK ==========
+hi IncSearch      guifg=#000000 guibg=#00ff99 gui=bold
+hi Search         guifg=#ffffff guibg=#ff8800
+hi Todo           guifg=#ffffff guibg=#cc00ff gui=bold
+hi Error          guifg=#ffffff guibg=#ff0044
+hi ErrorMsg       guifg=#ff0044
+
+" ========== DIFF / GIT ==========
+hi DiffAdd        guifg=#00ff66
+hi DiffDelete     guifg=#ff0044
+hi DiffChange     guifg=#00ccff
+
+hi GitGutterAdd    guifg=#00ff66
+hi GitGutterDelete guifg=#ff0044
+hi GitGutterChange guifg=#00ccff
