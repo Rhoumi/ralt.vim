@@ -1,7 +1,7 @@
 hi clear
 syntax on
 syntax reset
-let g:colors_name = "ralt_rainbow_black_custom"
+let g:colors_name = "ralt_rainbow_black_final"
 set background=dark
 set t_Co=256
 
@@ -39,7 +39,7 @@ function! s:python_colors() abort
   hi pythonDecorator        guifg=#0055aa gui=bold
   hi pythonDecoratorName    guifg=#003377 gui=bold
 
-  " Strings = verts
+  " Strings verts
   hi pythonString           guifg=#00ffb6
   hi pythonRawString        guifg=#33dda0
   hi pythonTripleString     guifg=#22bb88
@@ -53,7 +53,7 @@ function! s:python_colors() abort
   hi pythonNone             guifg=#ff4444 gui=bold
 
   " FONCTIONS / CLASSES
-  hi pythonFunction         guifg=#fc0000 gui=bold   " def des fonctions en rouge
+  hi pythonFunction         guifg=#fc7575 gui=bold
   hi pythonClass            guifg=#ff8888 gui=bold
   hi pythonSuperclass       guifg=#dd55dd gui=bold   " violet marqué
 
@@ -70,6 +70,15 @@ function! s:python_colors() abort
   hi pythonException        guifg=#ff3333 gui=bold
   hi pythonRaiseFrom        guifg=#ff7700 gui=bold
   hi pythonExClass          guifg=#ff2200 gui=bold
+
+  " =============== HACKS POUR def ET = ===============
+  " mettre 'def' en rouge
+  syntax keyword pythonDefKeyword def
+  hi pythonDefKeyword guifg=#fc0000 gui=bold
+
+  " = en violet
+  syntax match pythonEquals /==\|!=\|<=\|>=\|=\|<\|>/
+  hi pythonEquals guifg=#dd55ff
 endfunction
 
 " ================= MINI CRT FAKE =================
