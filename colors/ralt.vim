@@ -1,44 +1,47 @@
-" ============= COLORSCRIPT SAFE VIM =============
 hi clear
 syntax reset
-let g:colors_name="ralt_rainbow_black_vim"
+let g:colors_name = "ralt_garden_pal_violet_yellow"
 set background=dark
 set t_Co=256
 
-" BASE
-hi Normal guifg=#ffffff guibg=#000000
-hi LineNr guifg=#999999 guibg=#000000
-hi CursorLine guibg=#111111
-hi NonText guifg=#feffee guibg=#000000
+hi Normal guifg=#e5e5e5 guibg=#0c1210
+hi LineNr guifg=#7a6d9e guibg=#0c1210
+hi CursorLine guibg=#1a221f
+hi CursorLineNr guifg=#d8ff7a
+hi NonText guifg=#4b3f6a guibg=#0c1210
 
-" PYTHON
-hi pythonStatement guifg=#fc0000 gui=bold    " mots-clés: def, class, if etc. en rouge
-hi pythonOperator  guifg=#dd55ff             " tous les opérateurs en violet
-hi pythonDecorator guifg=#0055aa gui=bold    " décorateurs @ bleu foncé
-hi pythonDecoratorName guifg=#003377 gui=bold
+hi Type guifg=#b27aff
+hi Keyword guifg=#b27aff
+hi Statement guifg=#b27aff
+hi DiffAdd guifg=#b27aff
+hi GitGutterAdd guifg=#b27aff
 
-hi pythonString guifg=#00ffb6
-hi pythonRawString guifg=#33dda0
-hi pythonTripleString guifg=#22bb88
-hi pythonEscape guifg=#ff5577
+hi Error guifg=#ff6666
+hi ErrorMsg guifg=#ff6666
+hi DiffDelete guifg=#ff6666
+hi GitGutterDelete guifg=#ff6666
 
-hi Number guifg=#eeee77
-hi pythonBoolean guifg=#00cc55 gui=bold
-hi pythonNone guifg=#ff4444 gui=bold
+hi Constant guifg=#ffffaa
+hi Title guifg=#ffffaa
+hi String guifg=#d4d080
+hi MatchParen guifg=#ffffaa
+hi pythonString guifg=#d4d080 guibg=NONE
+hi pythonRawString guifg=#d4d080 guibg=NONE
+hi pythonTripleString guifg=#d4d080 guibg=NONE
+hi pythonEscape guifg=#ff6666
 
-hi pythonFunction guifg=#fc7575 gui=bold
-hi pythonClass guifg=#ff8888 gui=bold
-hi pythonSuperclass guifg=#dd55dd gui=bold
+hi IncSearch guifg=#d8ff7a guibg=NONE
+hi Define guifg=#d8ff7a
+hi Debug guifg=#d8ff7a
+hi Number guifg=#d8ff7a
+hi Todo guifg=#d8ff7a
 
-hi pythonBuiltin guifg=#00aaff
-hi pythonConditional guifg=#00ffb6 gui=bold
-hi pythonRepeat guifg=#00cc88 gui=bold
-hi pythonImport guifg=#33ffaa gui=bold
+hi Function guifg=#ff99aa
 
-hi pythonException guifg=#ff3333 gui=bold
-hi pythonRaiseFrom guifg=#ff7700 gui=bold
-hi pythonExClass guifg=#ff2200 gui=bold
-
-" Folds safe
-set fillchars=fold:.,horiz:-,horizup:+,horizdown:+,vertleft:+,vertright:+,foldopen:[,foldclose:]
-set listchars=tab:»·,trail:·,extends:>,precedes:<
+hi StatusLine guibg=#1a221f guifg=#00ff55 gui=bold
+hi StatusLineNC guibg=#0c1210 guifg=#777777
+hi Visual guibg=#1a221f
+hi VertSplit guifg=#4b3f6a guibg=NONE
+hi SignColumn guibg=#0c1210
+hi Pmenu guibg=#1c2923 guifg=#e5e5e5
+hi PmenuSel guibg=#b27aff guifg=#0c1210
