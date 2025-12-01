@@ -26,7 +26,7 @@ set listchars=tab:»·,trail:·,extends:>,precedes:<
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20
 set colorcolumn=80
 hi ColorColumn guibg=#111111
-set fillchars+=foldopen:[,foldclose:],foldsep:|
+set fillchars=vert:|,fold:.,horiz:-,horizup:+,horizdown:+,vertleft:+,vertright:+,foldopen:[,foldclose:],foldsep:|
 set noligatures
 
 " ================= PYTHON (safe) =================
