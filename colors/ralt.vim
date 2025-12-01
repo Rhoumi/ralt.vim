@@ -1,7 +1,7 @@
 hi clear
 syntax on
 syntax reset
-let g:colors_name = "ralt_rainbow_black"
+let g:colors_name = "ralt_rainbow_black_safe"
 set background=dark
 set t_Co=256
 
@@ -15,21 +15,22 @@ hi Pmenu guifg=#ffffff guibg=#000000
 hi PmenuSel guifg=#000000 guibg=#00ff55 gui=bold
 hi StatusLine gui=bold guibg=#00ff55 guifg=#000000
 hi StatusLineNC guibg=#000000 guifg=#ffffff
+hi TabLine guifg=#999999 guibg=#000000 gui=NONE
+hi TabLineFill gui=NONE guibg=#000000
 hi Visual guibg=#111111
 hi CursorLine guibg=#111111
 hi VertSplit guifg=#444444 guibg=NONE
 hi Search guibg=#9a2bf6 guifg=#ffffff
+hi ColorColumn guibg=#111111
 
-" ================= ASCII =================
-set fillchars=vert:│,fold:·,horiz:─,horizup:┴,horizdown:┬,vertleft:┤,vertright:├
+" ================= ASCII / FOLDS SAFE =================
+" Chaque champ doit avoir un caractère
+set fillchars=vert:|,fold:.,horiz:-,horizup:+,horizdown:+,vertleft:+,vertright:+,foldopen:[,foldclose:],foldsep:|
 set listchars=tab:»·,trail:·,extends:>,precedes:<
 set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20
-set colorcolumn=80
-hi ColorColumn guibg=#111111
-set fillchars=vert:|,fold:.,horiz:-,horizup:+,horizdown:+,vertleft:+,vertright:+,foldopen:[,foldclose:],foldsep:|
 set noligatures
 
-" ================= PYTHON (safe) =================
+" ================= PYTHON RAINBOW =================
 augroup python_colors
   autocmd!
   autocmd FileType python call s:python_colors()
@@ -40,7 +41,7 @@ function! s:python_colors() abort
   hi pythonDecorator        guifg=#33bbff gui=bold
   hi pythonDecoratorName    guifg=#0088ff gui=bold
 
-  " Strings = verts
+  " Strings = VERTS
   hi pythonString           guifg=#00ffb6
   hi pythonRawString        guifg=#33dda0
   hi pythonTripleString     guifg=#22bb88
@@ -56,7 +57,7 @@ function! s:python_colors() abort
   " FONCTIONS / CLASSES
   hi pythonFunction         guifg=#fc7575 gui=bold
   hi pythonClass            guifg=#ff8888 gui=bold
-  hi pythonSuperclass       guifg=#dd55dd gui=bold
+  hi pythonSuperclass       guifg=#dd55dd gui=bold  " violet marqué
 
   " BUILTINS / FLOW / IMPORT
   hi pythonBuiltin          guifg=#00aaff
@@ -72,3 +73,7 @@ function! s:python_colors() abort
   hi pythonRaiseFrom        guifg=#ff7700 gui=bold
   hi pythonExClass          guifg=#ff2200 gui=bold
 endfunction
+
+" ================= MINI CRT FAKE =================
+hi Normal guibg=#000000
+hi CursorLine guibg=#111111
