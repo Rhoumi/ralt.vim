@@ -4,19 +4,25 @@ let g:colors_name = "ralt_garden_pal"
 set background=dark
 set t_Co=256
 
-hi Normal guifg=#e5e5e5 guibg=#0c1210
-hi LineNr guifg=#6d6d6d guibg=#0c1210
-hi CursorLine guibg=#1a221f
+" === TRANSPARENCE GLOBALE ===
+hi Normal guifg=#e5e5e5 guibg=NONE
+hi LineNr guifg=#6d6d6d guibg=NONE
+hi NonText guifg=#355844 guibg=NONE
+hi SignColumn guibg=NONE
+hi VertSplit guifg=#233028 guibg=NONE
+
+" === CURSOR / SELECTION ===
+hi CursorLine guibg=NONE
 hi CursorLineNr guifg=#c7ff5e
-hi NonText guifg=#355844 guibg=#0c1210
+hi Visual guibg=NONE
+hi MatchParen guifg=#ffffff guibg=NONE
 
-
+" === SYNTAX ===
 hi Type guifg=#00c16a
 hi Keyword guifg=#00c16a
 hi Statement guifg=#00c16a
 hi DiffAdd guifg=#00c16a
 hi GitGutterAdd guifg=#00c16a
-
 
 hi Error guifg=#e04646
 hi ErrorMsg guifg=#e04646
@@ -26,7 +32,6 @@ hi GitGutterDelete guifg=#e04646
 hi Constant guifg=#ffffff
 hi Title guifg=#ffffff
 hi String guifg=#aacb7a
-hi MatchParen guifg=#ffffff
 hi pythonString guifg=#aacb7a guibg=NONE
 hi pythonRawString guifg=#aacb7a guibg=NONE
 hi pythonTripleString guifg=#aacb7a guibg=NONE
@@ -40,10 +45,12 @@ hi Todo guifg=#c7ff5e
 
 hi Function guifg=#fc6f6f
 
-hi StatusLine guibg=#1a221f guifg=#e5e5e5 gui=bold
-hi StatusLineNC guibg=#0c1210 guifg=#777777
-hi Visual guibg=#1a221f
-hi VertSplit guifg=#233028 guibg=NONE
-hi SignColumn guibg=#0c1210
-hi Pmenu guibg=#1c2923 guifg=#e5e5e5
-hi PmenuSel guibg=#00c16a guifg=#0c1210
+" === UI ===
+hi StatusLine guibg=NONE guifg=#e5e5e5 gui=bold
+hi StatusLineNC guibg=NONE guifg=#777777
+hi Pmenu guibg=NONE guifg=#e5e5e5
+hi PmenuSel guibg=NONE guifg=#00c16a
+
+" === FLOAT / POPUPS ===
+hi NormalFloat guibg=NONE
+hi FloatBorder guibg=NONE
